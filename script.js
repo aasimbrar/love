@@ -31,7 +31,7 @@ function showFinalMessage() {
   buttonsRow.style.display = "none";
   hintText.style.display = "none";
   heartPic.style.display = "none";
-  catPic.src = "dance.gif";
+  catPic.src = "love.png";
   finalMessage.classList.remove("hidden");
 }
 
