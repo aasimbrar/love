@@ -1,0 +1,34 @@
+const question = document.getElementById("question");
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const catPic = document.getElementById("catPic");
+
+let yesScale = 1;
+let stage = 1;
+
+noBtn.addEventListener("click", () => {
+  yesScale += 0.5;
+  yesBtn.style.transform = `scale(${yesScale})`;
+  if (stage === 1) {
+    catPic.src = "angry.png";
+  }
+});
+
+yesBtn.addEventListener("click", () => {
+  if (stage === 1) {
+    stage = 2;
+    question.textContent = "will u be my boyfriend, Ani?🥺";
+    catPic.src = "plead.png";
+    yesScale = 1;
+    yesBtn.style.transform = "scale(1)";
+    return;
+  }
+
+  catPic.src = "love.png";
+  question.textContent = "HEHEHEHEHEHEHE";
+  yesBtn.textContent = "forever";
+  yesScale = 1;
+  yesBtn.style.transform = "scale(1)";
+  noBtn.style.display = "none";
+});
+
