@@ -31,7 +31,7 @@ function showFinalMessage() {
   buttonsRow.style.display = "none";
   hintText.style.display = "none";
   heartPic.style.display = "none";
-  catPic.src = "love.png";
+  catPic.style.display = "none";
   finalMessage.classList.remove("hidden");
 }
 
